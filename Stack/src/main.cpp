@@ -74,7 +74,7 @@ template <class t>
 
 // };
 
-// Usage 
+// Usage
 
 // stack<int>s;
 // 	s.push(5);
@@ -82,6 +82,107 @@ template <class t>
 // 	s.push(20);
 // 	 int f = 0;
 // 	s.Peek(f);
+
+#pragma endregion
+
+#pragma region // Linked List Impelementation
+
+// class stack
+// {
+
+// 	struct node
+// 	{
+// 		t item;
+// 		node *next;
+// 	};
+
+// 	node *top;
+
+// public:
+// 	stack()
+// 	{
+// 		top = NULL;
+// 	}
+
+// 	void push(t item)
+// 	{
+
+// 		node *newNode = new node;
+// 		newNode->item = item;
+// 		newNode->next = top;
+// 		top = newNode;
+// 	}
+
+// 	void print()
+// 	{
+// 		node *temp = top;
+
+// 		while (temp != NULL)
+// 		{
+// 			cout << temp->item;
+// 			cout << "\n";
+// 			temp = temp->next;
+// 		}
+// 	}
+
+// 	bool isEmpty()
+// 	{
+// 		return top == NULL;
+// 	}
+
+// 	void pop()
+// 	{
+
+// 		if (isEmpty())
+// 		{
+// 			cout << "Stack Is Empty";
+// 		}
+// 		else
+// 		{
+
+// 			node *temp = top;
+// 			top = top->next;
+// 			// temp->next = NULL;
+// 			delete temp;
+// 		}
+// 	}
+// 	void pop(t stackTop)
+// 	{
+
+// 		if (isEmpty())
+// 		{
+// 			cout << "Stack Is Empty";
+// 		}
+// 		else
+// 		{
+
+// 			stackTop = top->item;
+// 			node *temp = top;
+// 			top = top->next;
+// 			temp->next = NULL;
+// 			delete temp;
+// 		}
+// 	}
+
+// 	void peek(t stackTop)
+// 	{
+// 		if (isEmpty())
+// 			cout << "stack empty on getTop";
+// 		else
+// 			stackTop = top->item;
+// 		cout << "\nTop Element of the stack is " << stackTop;
+// 		cout << endl;
+// 	}
+// };
+
+// usage
+
+// stack<int> fo;
+// fo.push(8);
+// fo.push(9);
+// fo.push(10);
+// fo.pop();
+// fo.print();
 
 #pragma endregion
 
