@@ -186,7 +186,43 @@ template <class t>
 
 #pragma endregion
 
+#pragma region binarySearch
+// int binarySearch(int arr[], int n, int size);
+
+// int binarySearch(int arr[], int n, int size)
+// {
+
+//     int start = 0;
+//     int middle;
+//     int end = size - 1;
+
+//     while (end >= start)
+//     {
+
+//         middle = start + (end - start) / 2;
+
+//         if (arr[middle] == n)
+//         {
+//             return middle;
+//         }
+//         else if (arr[middle] > n)
+//         {
+//             end = middle - 1;
+//         }
+//         else
+//         {
+//             start = middle + 1;
+//         }
+//         /* code */
+//     }
+
+//     return -1;
+// }
+
+#pragma endregion
+
 int main(int argc, char *argv[])
 {
+
 
 }
