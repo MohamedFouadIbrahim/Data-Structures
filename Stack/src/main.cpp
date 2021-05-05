@@ -221,8 +221,32 @@ template <class t>
 
 #pragma endregion
 
-int main(int argc, char *argv[])
+void bubbleSort(int arr[]);
+
+void bubbleSort(int arr[], int length)
 {
 
+    int i = 0;
+    bool isSwapped = true;
 
+    while (isSwapped)
+    {
+        isSwapped = false;
+
+        for (int j = 0; j < length - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                isSwapped = true;
+            }
+        }
+        i++;
+    }
+}
+
+int main(int argc, char *argv[])
+{
 }
