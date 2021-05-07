@@ -251,6 +251,35 @@ template <class t>
 
 #pragma endregion
 
+#pragma region // selectionSort
+
+void selectionSort(int arr[]);
+
+void selectionSort(int arr[], int length)
+{
+
+    int t, smallestElementIndex = 0;
+
+    while (t + 1 < length)
+    {
+        for (int i = t; i < length; i++) // find small one
+        {
+            if (arr[smallestElementIndex] > arr[i])
+            {
+                smallestElementIndex = i;
+            }
+        }
+
+        // replace it at the first
+        int temp = arr[t];
+        arr[t] = arr[smallestElementIndex];
+        arr[smallestElementIndex] = temp;
+        t++;
+        smallestElementIndex = t;
+    }
+}
+
+#pragma endregion
 
 int main(int argc, char *argv[])
 {
