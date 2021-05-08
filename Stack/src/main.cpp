@@ -317,8 +317,5 @@ template <class t>
 #pragma endregion
 int main(int argc, char *argv[])
 {
-    int data[6] = {1, 10, 45, 66, 55, 9};
-
-    insertionSort(data, 6);
-    display(data,6);
+   
 }
