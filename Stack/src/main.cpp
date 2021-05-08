@@ -281,6 +281,44 @@ template <class t>
 
 #pragma endregion
 
+#pragma region // insertionSort
+
+void insertionSort(int arr[], int length);
+void display(int *array, int size);
+
+void display(int *array, int size)
+{
+    for (int i = 0; i < size; i++)
+        cout << array[i] << " ";
+    cout << endl;
+}
+
+void insertionSort(int *array, int size)
+{
+    int key, j;
+
+    for (int i = 1; i < size; i++)
+    {
+        key = array[i]; //take value
+        j = i;
+
+        while (j > 0 && array[j - 1] > key)
+        {
+            array[j] = array[j - 1];
+            j--;
+        }
+
+        array[j] = key; //insert in right place
+
+    }
+
+}
+
+#pragma endregion
 int main(int argc, char *argv[])
 {
+    int data[6] = {1, 10, 45, 66, 55, 9};
+
+    insertionSort(data, 6);
+    display(data,6);
 }
